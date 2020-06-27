@@ -14,5 +14,11 @@ yarn add @react-native-community/masked-view
 yarn add react-native-camera
 yarn add react-native-vector-icons
 yarn add express
+yarn add multer
+yarn add util
+yarn add path
+yarn add fs
+yarn add react-native-fetch-blob
+yarn add events
 npx pod-install ios
 ```
