@@ -12,5 +12,6 @@ yarn add @react-navigation/native
 yarn add @react-navigation/stack
 yarn add @react-native-community/masked-view
 yarn add react-native-camera
+yarn add react-native-vector-icons
 npx pod-install ios
 ```
