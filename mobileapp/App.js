@@ -5,6 +5,7 @@ import {
   Text,
   View,
 } from 'react-native'
+
 import Camera from './components/Camera';
 
 class App extends Component {
