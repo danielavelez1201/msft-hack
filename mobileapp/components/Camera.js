@@ -9,10 +9,14 @@ import {
   View
 } from 'react-native';
 
+var imageArr = [];
+exports.imageArr = imageArr;
+
 export default class Camera extends PureComponent {
   constructor(props) {
     super(props);
   }
+
 
   render() {
     return (
@@ -34,11 +38,16 @@ export default class Camera extends PureComponent {
       this.setState({ path: data.uri });
       // this.props.updateImage(data.uri);
        console.log('Path to image: ' + data.uri);
+
+       imageArr.push(data.uri);
+       console.log(imageArr)
     } catch (err) {
       console.log('err: ', err);
     }
   };
 }
+
+
 
 //aspect={RNCamera.constants.Aspect.fill}>
 
