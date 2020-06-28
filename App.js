@@ -158,18 +158,8 @@ function GamePage({ route, navigation }) {
   state = {
     btnSelected: 0
   }
-  await fetch("https://flask-mongodb-app.azurewebsites.net/see", {
-    method: "GET"
-  }).then(response => response.json())
-  .then(json => {
-    dataList.push(json);
-  }).catch(err => console.log(err));
-  console.log("json now", dataList)
-  processing = false;
-  }
   return (
     <View>
-
         <FlatList
           data={dataList[0]}
           renderItem={({item}) =>
