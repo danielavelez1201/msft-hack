@@ -7,7 +7,8 @@ import {
   Text,
   TouchableHighlight,
   View,
-  Image
+  Image,
+  Button
 } from 'react-native';
 import RNDownloadButton from 'react-native-download-button';  
 import ReactDOM from 'react-dom';
@@ -206,6 +207,16 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width
   },
   capture: {
+    flex: 1,
+    textAlign: 'center',
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 60,
+    marginTop: 650
+  },
+  detect: {
     flex: 1,
     textAlign: 'center',
     backgroundColor: '#fff',
