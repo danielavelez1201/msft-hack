@@ -1,4 +1,5 @@
 {
     "appService.defaultWebAppToDeploy": "/subscriptions/07acc69a-6f81-4c57-bb79-f7a03f87bd29/resourceGroups/Hackathon/providers/Microsoft.Web/sites/msft-hack",
-    "appService.deploySubpath": "mobileapp"
+    "appService.deploySubpath": "mobileapp",
+    "appService.showBuildDuringDeployPrompt": false
 }
