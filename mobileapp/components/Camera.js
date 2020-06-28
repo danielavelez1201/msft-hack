@@ -203,11 +203,13 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width
   },
   capture: {
-    flex: 0,
+    flex: 1,
+    textAlign: 'center',
     backgroundColor: '#fff',
     borderRadius: 5,
     color: '#000',
     padding: 10,
-    margin: 40
+    margin: 60,
+    marginTop: 650
   }
 });

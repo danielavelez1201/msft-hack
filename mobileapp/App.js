@@ -37,7 +37,7 @@ class App extends Component {
         <Stack.Screen
           name="GamePage"
           component={GamePage}
-          options={{title: 'GamePage'}}
+          options={{title: 'Try and find them ALL!'}}
           />
       </Stack.Navigator>
     </NavigationContainer>
@@ -83,10 +83,18 @@ function PicturePage({navigation}) {
     <>
       <Camera />
       <Button
-        title="Go to the game page"
+        title="GO TO GAME PAGE  "
         onPress={() =>
           navigation.navigate('GamePage', { name: 'GamePage'})
         }
+        iconRight
+        icon={
+          <Icon
+            name="arrow-right"
+            size={20}
+            color="white"
+          />
+          }
       />
     </>
   )
@@ -103,12 +111,12 @@ function GamePage({ route, navigation }) {
             <Button
             buttonStyle={page.button}
             color="white"
-            title= {item[1]}
+            title= {item[1].toLowerCase()}
             titleStyle={page.item}
             type="solid"
             icon={
               <Icon
-                name="arrow-right"
+                name="star"
                 size={20}
                 color="white"
               />}
@@ -120,25 +128,30 @@ function GamePage({ route, navigation }) {
 
 const page = StyleSheet.create({
   button: {
-    margin: 15,
-    backgroundColor: "#51c9ed",
-    padding: 20
+    marginHorizontal: 30,
+    justifyContent:'flex-start',
+    margin:10,
+    borderRadius: 10,
+    backgroundColor: "#51c9ed"
   },
   item: {
     color: 'white',
     borderRadius: 2,
-    fontSize: 40,
-    height: 44,
+    margin: 10,
+    marginLeft: 20,
+    fontSize: 30,
+    height: 40
   },
   homepage : {
     backgroundColor: "#51c9ed",
-    flex: 1,
+    flex: 1
   },
   title : {
     color: "white",
-    fontSize: 40,
+    fontSize: 55,
     fontWeight: "bold",
-    textAlign: 'center'
+    textAlign: 'center',
+    marginBottom: 10
   },
   container: {
     flex: 1,
