@@ -13,6 +13,7 @@ import {
 } from 'react-native';
 import RNDownloadButton from 'react-native-download-button';  
 import ReactDOM from 'react-dom';
+import 'react-native-gesture-handler';
 
 
 var imageArr = [];
