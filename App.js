@@ -158,10 +158,6 @@ function GamePage({ route, navigation }) {
   state = {
     btnSelected: 0
   }
-  var statuses = []
-  for (i=0; i< dataList[0].length; i++) {
-    statuses.push()
-  }
   await fetch("https://flask-mongodb-app.azurewebsites.net/see", {
     method: "GET"
   }).then(response => response.json())
