@@ -248,7 +248,11 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+<<<<<<< HEAD
+				3559A3C2879BEB0EAC4278F6 /* [CP] Copy Pods Resources */,
+=======
 				6BEF1CB7C789CA7ABE3C42A7 /* [CP] Copy Pods Resources */,
+>>>>>>> 8c66138a67eadc0caf7a55d6cc7234271f6c2279
 			);
 			buildRules = (
 			);
@@ -270,7 +274,11 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+<<<<<<< HEAD
+				8D80D51F5388EB2598876DEF /* [CP] Copy Pods Resources */,
+=======
 				783E02C1F3732A79260BD94F /* [CP] Copy Pods Resources */,
+>>>>>>> 8c66138a67eadc0caf7a55d6cc7234271f6c2279
 			);
 			buildRules = (
 			);
@@ -474,7 +482,11 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+<<<<<<< HEAD
+		3559A3C2879BEB0EAC4278F6 /* [CP] Copy Pods Resources */ = {
+=======
 		6BEF1CB7C789CA7ABE3C42A7 /* [CP] Copy Pods Resources */ = {
+>>>>>>> 8c66138a67eadc0caf7a55d6cc7234271f6c2279
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,7 +534,11 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-mobileapp-mobileappTests/Pods-mobileapp-mobileappTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+<<<<<<< HEAD
+		8D80D51F5388EB2598876DEF /* [CP] Copy Pods Resources */ = {
+=======
 		783E02C1F3732A79260BD94F /* [CP] Copy Pods Resources */ = {
+>>>>>>> 8c66138a67eadc0caf7a55d6cc7234271f6c2279
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (

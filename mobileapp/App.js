@@ -49,13 +49,18 @@ class App extends Component {
 function HomeScreen({ navigation }) {
   return (
       <View style = {page.homepage}>
-        <Text style={page.title}>Findling</Text>
+        <Image
+          source={require('./ducky.png')}
+          style={{ width: 150, height: 150, marginLeft:130, marginTop: 200}}
+        />
+        <Text style={page.title}>f i n d l i n g</Text>
 
-      <View style={[{width: "50%", marginLeft:100, marginTop: 30}]}>
+      <View style={[{width: "50%", marginLeft:100}]}>
         <Button
         color="white"
-        title= "Start game setup!"
+        title= "START ADVENTURE  "
         type="solid"
+        iconRight
         icon={
           <Icon
             name="arrow-right"
@@ -68,6 +73,7 @@ function HomeScreen({ navigation }) {
           }
         />
       </View>
+
     </View>
   );
 }
@@ -130,11 +136,9 @@ const page = StyleSheet.create({
   },
   title : {
     color: "white",
-    fontSize: 70,
+    fontSize: 40,
     fontWeight: "bold",
-    textAlign: 'center',
-    marginTop: 200
-
+    textAlign: 'center'
   },
   container: {
     flex: 1,
