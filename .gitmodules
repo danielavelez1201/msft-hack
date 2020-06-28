@@ -1,0 +1,3 @@
+[submodule "msft-hack-backend"]
+	path = msft-hack-backend
+	url = https://github.com/snow-kang/msft-hack-backend.git
