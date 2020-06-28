@@ -17,7 +17,7 @@ var CameraPage = require('./components/Camera');
 var imageArr = CameraPage.imageArr;
 var dataList = CameraPage.dataList;
 var processing = CameraPage.processing;
-var
+
 
 class ButtonState extends Component {
   constructor(props: Props) {
@@ -157,6 +157,19 @@ function GamePage({ route, navigation }) {
   console.log("images",  imageArr);
   state = {
     btnSelected: 0
+  }
+  var statuses = []
+  for (i=0; i< dataList[0].length; i++) {
+    statuses.push()
+  }
+  await fetch("https://flask-mongodb-app.azurewebsites.net/see", {
+    method: "GET"
+  }).then(response => response.json())
+  .then(json => {
+    dataList.push(json);
+  }).catch(err => console.log(err));
+  console.log("json now", dataList)
+  processing = false;
   }
   return (
     <View>
