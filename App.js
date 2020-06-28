@@ -17,7 +17,7 @@ var CameraPage = require('./components/Camera');
 var imageArr = CameraPage.imageArr;
 var dataList = CameraPage.dataList;
 var processing = CameraPage.processing;
-
+var
 
 class ButtonState extends Component {
   constructor(props: Props) {
