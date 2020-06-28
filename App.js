@@ -48,7 +48,7 @@ class ButtonState extends Component {
       <Icon
         name="star"
         size={20}
-        colors="white"
+        colors="#fff595"
       />}
     onPress={this.toggle}
   />
@@ -163,7 +163,7 @@ function GamePage({ route, navigation }) {
         <FlatList
           data={dataList[0]}
           renderItem={({item}) =>
-          <ButtonState item={{text: item[1]}}/>
+          <ButtonState item={{text: item[1].toLowerCase()}}/>
           }
         />
     </View>
