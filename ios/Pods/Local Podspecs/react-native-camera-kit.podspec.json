@@ -1,0 +1,34 @@
+{
+  "name": "react-native-camera-kit",
+  "version": "8.0.4",
+  "summary": "Advanced native camera control with pre-defined aspect ratio, crop, etc",
+  "description": "Advanced native camera control with pre-defined aspect ratio, crop, etc",
+  "license": "MIT",
+  "authors": "Ran Greenberg <rang@wix.com>",
+  "homepage": "https://github.com/wix/react-native-camera-kit",
+  "source": {
+    "git": "https://github.com/wix/react-native-camera-kit",
+    "tag": "8.0.4"
+  },
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "preserve_paths": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "CameraKitCamera.android.js",
+    "CameraKitCamera.ios.js",
+    "CameraKitGallery.android.js",
+    "CameraKitGallery.ios.js",
+    "CameraKitGalleryView.android.js",
+    "CameraKitGalleryView.ios.js"
+  ],
+  "source_files": "ios/lib/ReactNativeCameraKit/*.{h,m}",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}

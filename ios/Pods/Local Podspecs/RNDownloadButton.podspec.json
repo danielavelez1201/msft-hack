@@ -1,0 +1,29 @@
+{
+  "name": "RNDownloadButton",
+  "version": "1.0.0",
+  "summary": "React Native: Native Download Button",
+  "description": "React Native: Native Download Button",
+  "homepage": "https://github.com/prscX/react-native-download-button.git",
+  "license": "Apache License",
+  "authors": "Pranav Raj Singh Chauhan",
+  "source": {
+    "git": "https://github.com/prscX/react-native-download-button.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "preserve_paths": [
+    "LICENSE",
+    "package.json"
+  ],
+  "source_files": "**/*.{h,m}",
+  "dependencies": {
+    "React": [
+
+    ],
+    "FFCircularProgressView": [
+
+    ]
+  }
+}
