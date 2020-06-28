@@ -17,6 +17,9 @@ exports.objectArr = objectArr;
 var transArr = []
 exports.transArr = transArr;
 
+var dataList = [];
+exports.dataList = dataList;
+
 export default class Camera extends PureComponent {
   constructor(props) {
     super(props);
@@ -88,19 +91,27 @@ export default class Camera extends PureComponent {
         body: JSON.stringify(obj_list)
       }).then(response => response.json())
       .then(json => {
-        transArr.push(json[0].translations);
+        for (i=0; i < json.length; i++) {
+          transArr.push(json[i].translations);
+        }
       });
       console.log(transArr)
-      var obj_trans = transArr[0][0]["text"];
-      var obj = "apple";
-      fetch("https://flask-mongodb-app.azurewebsites.net/create?obj=" + obj + "&&trans=" + obj_trans);
 
-      fetch("https://flask-mongodb-app.azurewebsites.net/see", {
+      //const forLoop = async _ => {
+      for (i=0; i < objectArr.length; i++) {
+        var obj_trans = transArr[i][0]["text"];
+        var obj = objectArr[i];
+        await fetch("https://flask-mongodb-app.azurewebsites.net/create?obj=" + obj + "&&trans=" + obj_trans);
+      }
+      //}
+
+      await fetch("https://flask-mongodb-app.azurewebsites.net/see", {
         method: "GET"
       }).then(response => response.json())
       .then(json => {
-        console.log(json);
+        dataList.push(json);
       });
+      console.log("json now", dataList)
 
     } catch (err) {
       console.log('err: ', err);

@@ -15,6 +15,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 var CameraPage = require('./components/Camera');
 var imageArr = CameraPage.imageArr;
+var dataList = CameraPage.dataList;
 
 const Stack = createStackNavigator();
 class App extends Component {
@@ -86,33 +87,49 @@ function PicturePage({navigation}) {
 }
 
 function GamePage({ route, navigation }) {
+  console.log("game page data",  dataList[0]);
+  console.log("images",  imageArr);
   return (
-    <View style={page.container}>
+    <View>
         <FlatList
-          data={[
-            {key: 'Devin'},
-            {key: 'Dan'},
-            {key: 'Dominic'},
-            {key: 'Jackson'},
-            {key: 'James'},
-            {key: 'Joel'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
-          ]}
-          renderItem={({item}) => <Text style={page.item}>{item.key}</Text>}
+          data={dataList[0]}
+          renderItem={({item}) =>
+            <Button
+            buttonStyle={page.button}
+            color="white"
+            title= {item[1]}
+            titleStyle={page.item}
+            type="solid"
+            icon={
+              <Icon
+                name="arrow-right"
+                size={20}
+                color="white"
+              />}
+          />}
         />
-      </View>
+    </View>
   )
 }
 
 const page = StyleSheet.create({
+  button: {
+    margin: 15,
+    backgroundColor: "#51c9ed",
+    padding: 20
+  },
+  item: {
+    color: 'white',
+    borderRadius: 2,
+    fontSize: 40,
+    height: 44,
+  },
   homepage : {
-    backgroundColor: "#c2fffe",
+    backgroundColor: "#51c9ed",
     flex: 1,
   },
   title : {
+    color: "white",
     fontSize: 50,
     fontWeight: "bold",
     color: "#000",
