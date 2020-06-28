@@ -99,7 +99,7 @@ export default class Camera extends PureComponent {
       for (i=0; i< json.objects.length; i++) {
         objectArr.push(json.objects[i].object);
       }
-    });
+    }).catch(err => console.log(err));
 
     var urlbody = {"url": image_urls[1]}
     await fetch("https://computervisionobjectdetection.cognitiveservices.azure.com/vision/v3.0/detect", {
@@ -115,7 +115,7 @@ export default class Camera extends PureComponent {
       for (i=0; i< json.objects.length; i++) {
         objectArr.push(json.objects[i].object);
       }
-    });
+    }).catch(err => console.log(err));
 
     var urlbody = {"url": image_urls[2]}
     await fetch("https://computervisionobjectdetection.cognitiveservices.azure.com/vision/v3.0/detect", {
@@ -131,7 +131,7 @@ export default class Camera extends PureComponent {
       for (i=0; i< json.objects.length; i++) {
         objectArr.push(json.objects[i].object);
       }
-    });
+    }).catch(err => console.log(err));
     //END
     var obj_list = [];
     for (i=0; i < objectArr.length; i++) {
@@ -153,7 +153,7 @@ export default class Camera extends PureComponent {
       for (i=0; i < json.length; i++) {
         transArr.push(json[i].translations);
       }
-    });
+    }).catch(err => console.log(err));
     console.log("transArr", transArr)
 
     //const forLoop = async _ => {
@@ -169,7 +169,7 @@ export default class Camera extends PureComponent {
     }).then(response => response.json())
     .then(json => {
       dataList.push(json);
-    });
+    }).catch(err => console.log(err));
     console.log("json now", dataList)
     processing = false;
   }
