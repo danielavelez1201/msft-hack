@@ -16,9 +16,50 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 var CameraPage = require('./components/Camera');
 var imageArr = CameraPage.imageArr;
 var dataList = CameraPage.dataList;
+var processing = CameraPage.processing;
+
+
+class ButtonState extends Component {
+  constructor(props: Props) {
+        super(props);
+        this.state = {
+          buttonState: 0,
+        };
+        this.toggle = this.toggle.bind(this);
+    };
+
+  toggle() {
+    this.state = {
+      buttonState: 1
+    }
+  }
+
+  render() {
+    const { item } = this.props;
+
+  return(
+    <Button
+    buttonStyle={(this.state.buttonState== 1)?page.buttonActive:page.button}
+    color="white"
+    title= {item.text}
+    titleStyle={page.item}
+    type="solid"
+    icon={
+      <Icon
+        name="star"
+        size={20}
+        colors="white"
+      />}
+    onPress={this.toggle}
+  />
+  )
+
+}
+}
 
 const Stack = createStackNavigator();
 class App extends Component {
+
  render() {
     return (
       <NavigationContainer>
@@ -79,7 +120,14 @@ function HomeScreen({ navigation }) {
 }
 
 function PicturePage({navigation}) {
-  return (
+  if (processing == 1) {
+    return (
+    <>
+      <Camera />
+    </>
+    )
+  } else {
+    return (
     <>
       <Camera />
       <Button
@@ -97,30 +145,27 @@ function PicturePage({navigation}) {
           }
       />
     </>
-  )
+    )
+  }
 }
 
+console.log("before",  dataList[0]);
+console.log("images",  imageArr);
+dataList = [[["orange", "naranja", 0], ["apple", "manzana", 0], ["tomato", "Tomate", 0], ["sofa", "Sofá", 0], ["dormer window", "ventana dormida", 0], ["Sofa bed", "Sofá cama", 0], ["chair", "Silla", 0], ["oven", "Horno", 0], ["seating", "Asientos", 0], ["television", "Televisión", 0], ["couch", "Sofá", 0]]];
 function GamePage({ route, navigation }) {
   console.log("game page data",  dataList[0]);
   console.log("images",  imageArr);
+  state = {
+    btnSelected: 0
+  }
   return (
     <View>
+
         <FlatList
           data={dataList[0]}
           renderItem={({item}) =>
-            <Button
-            buttonStyle={page.button}
-            color="white"
-            title= {item[1].toLowerCase()}
-            titleStyle={page.item}
-            type="solid"
-            icon={
-              <Icon
-                name="star"
-                size={20}
-                color="white"
-              />}
-          />}
+          <ButtonState item={{text: item[1]}}/>
+          }
         />
     </View>
   )
@@ -162,6 +207,11 @@ const page = StyleSheet.create({
     color: "#000",
     fontSize: 14,
     fontWeight: "bold"
+  },
+  buttonActive: {
+    margin: 15,
+    backgroundColor: "#000",
+    padding: 20
   }
 })
 

@@ -22,6 +22,8 @@ exports.transArr = transArr;
 var dataList = [];
 exports.dataList = dataList;
 
+var processing = false;
+exports.processing = processing;
 
 export default class Camera extends PureComponent {
   constructor(props) {
@@ -61,8 +63,6 @@ export default class Camera extends PureComponent {
      );
    }
 
-
-
    render() {
      return (
        <View style={styles.container}>
@@ -71,7 +71,10 @@ export default class Camera extends PureComponent {
      );
    }
 
+
+
   takePicture = async () => {
+    processing = true;
     try {
       const data = await this.camera.takePictureAsync();
       console.log(data);
@@ -179,6 +182,7 @@ export default class Camera extends PureComponent {
     } catch (err) {
       console.log('err: ', err);
     }
+    processing = false;
   };
 }
 
@@ -187,7 +191,6 @@ export default class Camera extends PureComponent {
 
 
 
-//aspect={RNCamera.constants.Aspect.fill}>
 
 
 const styles = StyleSheet.create({
