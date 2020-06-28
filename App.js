@@ -152,7 +152,7 @@ function PicturePage({navigation}) {
 
 //console.log("before",  dataList[0]);
 //console.log("images",  imageArr);
-//dataList = [[["orange", "naranja", 0], ["apple", "manzana", 0], ["tomato", "Tomate", 0], ["sofa", "Sofá", 0], ["dormer window", "ventana dormida", 0], ["Sofa bed", "Sofá cama", 0], ["chair", "Silla", 0], ["oven", "Horno", 0], ["seating", "Asientos", 0], ["television", "Televisión", 0], ["couch", "Sofá", 0]]];
+dataList = [[["orange", "naranja", 0], ["apple", "manzana", 0], ["tomato", "tomate", 0], ["sofa", "sofá", 0], ["dormer window", "ventana dormida", 0], ["Sofa bed", "sofá cama", 0], ["chair", "silla", 0], ["oven", "horno", 0], ["seating", "asientos", 0], ["television", "televisión", 0], ["couch", "sofá", 0]]];
 function GamePage({ route, navigation }) {
   console.log("game page data",  dataList[0]);
   console.log("images",  imageArr);

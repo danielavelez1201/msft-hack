@@ -152,7 +152,7 @@ export default class Camera extends PureComponent {
     .then(json => {
       console.log("translation", json)
       for (i=0; i < json.length; i++) {
-        transArr.push(json[i].translations);
+        transArr.push(json[i].translations.toLowerCase());
       }
     }).catch(err => console.log(err));
     console.log("transArr", transArr)
@@ -228,8 +228,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     margin: 10,
-    marginTop: 650,
-    marginBottom: 50
+    marginTop: 400,
+    marginBottom: 100
   },
   detect: {
     fontSize: 30,
@@ -241,8 +241,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     margin: 10,
-    marginTop: 650,
-    marginBottom: 50
+    marginTop: 400,
+    marginBottom: 100
   },
   container: {
     flex: 1,
