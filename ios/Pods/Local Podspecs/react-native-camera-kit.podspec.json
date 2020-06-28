@@ -4,7 +4,10 @@
   "summary": "Advanced native camera control with pre-defined aspect ratio, crop, etc",
   "description": "Advanced native camera control with pre-defined aspect ratio, crop, etc",
   "license": "MIT",
-  "authors": "Ran Greenberg <rang@wix.com>",
+  "authors": {
+    "name": "Ran Greenberg",
+    "email": "rang@wix.com"
+  },
   "homepage": "https://github.com/wix/react-native-camera-kit",
   "source": {
     "git": "https://github.com/wix/react-native-camera-kit",
