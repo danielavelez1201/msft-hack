@@ -11,6 +11,7 @@ PODS:
     - React-Core (= 0.62.2)
     - React-jsi (= 0.62.2)
     - ReactCommon/turbomodule/core (= 0.62.2)
+  - FFCircularProgressView (0.5)
   - Flipper (0.33.1):
     - Flipper-Folly (~> 2.1)
     - Flipper-RSocket (~> 1.0)
@@ -306,9 +307,14 @@ PODS:
     - ReactCommon/callinvoker (= 0.62.2)
   - RNCMaskedView (0.1.10):
     - React
+  - RNDownloadButton (1.0.0):
+    - FFCircularProgressView
+    - React
   - RNGestureHandler (1.6.1):
     - React
   - RNScreens (2.9.0):
+    - React
+  - RNVectorIcons (6.6.0):
     - React
   - Yoga (1.14.0)
   - YogaKit (1.18.1):
@@ -365,8 +371,10 @@ DEPENDENCIES:
   - ReactCommon/callinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - RNDownloadButton (from `../node_modules/react-native-download-button/ios`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNScreens (from `../node_modules/react-native-screens`)
+  - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -374,6 +382,7 @@ SPEC REPOS:
     - boost-for-react-native
     - CocoaAsyncSocket
     - CocoaLibEvent
+    - FFCircularProgressView
     - Flipper
     - Flipper-DoubleConversion
     - Flipper-Folly
@@ -441,10 +450,14 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNDownloadButton:
+    :path: "../node_modules/react-native-download-button/ios"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNScreens:
     :path: "../node_modules/react-native-screens"
+  RNVectorIcons:
+    :path: "../node_modules/react-native-vector-icons"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -455,6 +468,7 @@ SPEC CHECKSUMS:
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   FBLazyVector: 4aab18c93cd9546e4bfed752b4084585eca8b245
   FBReactNativeSpec: 5465d51ccfeecb7faa12f9ae0024f2044ce4044e
+  FFCircularProgressView: 683a4ab1e1bd613246a3dffa61503ffdebcde8d8
   Flipper: 6c1f484f9a88d30ab3e272800d53688439e50f69
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: c12092ea368353b58e992843a990a3225d4533c3
@@ -474,9 +488,9 @@ SPEC CHECKSUMS:
   React-jsi: b6dc94a6a12ff98e8877287a0b7620d365201161
   React-jsiexecutor: 1540d1c01bb493ae3124ed83351b1b6a155db7da
   React-jsinspector: 512e560d0e985d0e8c479a54a4e5c147a9c83493
-  react-native-camera: f57b28a587a81c50085b77f3fdc71818089ab45d
-  react-native-camera-kit: ded127598a48890a360fbf5e26cf7c44fcc5b873
-  react-native-safe-area-context: c39fc20a20cd66ebf1d56c6f8b8711142fbfee98
+  react-native-camera: eeb5b5f4ba4c1365fed3563af8a72007cbad7aab
+  react-native-camera-kit: 498a6d111a904834e0824e9073cfadef7303235f
+  react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
   React-RCTActionSheet: f41ea8a811aac770e0cc6e0ad6b270c644ea8b7c
   React-RCTAnimation: 49ab98b1c1ff4445148b72a3d61554138565bad0
   React-RCTBlob: a332773f0ebc413a0ce85942a55b064471587a71
@@ -487,9 +501,11 @@ SPEC CHECKSUMS:
   React-RCTText: fae545b10cfdb3d247c36c56f61a94cfd6dba41d
   React-RCTVibration: 4356114dbcba4ce66991096e51a66e61eda51256
   ReactCommon: ed4e11d27609d571e7eee8b65548efc191116eb3
-  RNCMaskedView: f5c7d14d6847b7b44853f7acb6284c1da30a3459
+  RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
+  RNDownloadButton: 4102419601dee08dede223674ece6752aae06af8
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da
+  RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   Yoga: 3ebccbdd559724312790e7742142d062476b698e
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 

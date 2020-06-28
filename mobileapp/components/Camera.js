@@ -9,6 +9,8 @@ import {
   View,
   Image
 } from 'react-native';
+import RNDownloadButton from 'react-native-download-button';  
+
 
 var imageArr = [];
 exports.imageArr = imageArr;
@@ -39,7 +41,8 @@ export default class Camera extends PureComponent {
         captureAudio={false}
         style={{flex: 1}}
         type={RNCamera.Constants.Type.back}>
-        <Text style={styles.capture} onPress={this.takePicture.bind(this)}>Capture</Text>
+        <RNDownloadButton size={300} progress={this.state.progress} reset={this.state.reset} onPress={this.takePicture.bind(this)} />
+        //<Text style={styles.capture} onPress={this.takePicture.bind(this)}>Capture</Text>
       </RNCamera>
     );
   }

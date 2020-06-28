@@ -130,9 +130,8 @@ const page = StyleSheet.create({
   },
   title : {
     color: "white",
-    fontSize: 50,
+    fontSize: 70,
     fontWeight: "bold",
-    color: "#000",
     textAlign: 'center',
     marginTop: 200
 

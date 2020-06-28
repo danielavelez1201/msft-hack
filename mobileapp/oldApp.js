@@ -66,7 +66,7 @@ function SettingsStackScreen() {
 
 const Tab = createBottomTabNavigator();
 
-export default function App() extend React.Component() {
+export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
