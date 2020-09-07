@@ -1,3 +1,15 @@
+# Microsoft Hack for Good 2020: Findling 
+
+Findling is an edcuational app that teaches foreign languages to children through an auto-generated scavenger hunt throughout their home. 
+It uses 4+ Azure services, including object detection, translation, databases, and App Service!
+
+[Visit Presentation](bit.ly/findling-app)
+
+[Visit Demo](bit.ly/findling-demo)
+
+
+## Development 
+
 To run the simulator:
 npx react-native run-ios
 
